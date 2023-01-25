@@ -15,12 +15,7 @@ const AboutPage = () => {
             <div className='underline'></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-            quaerat, modi doloremque necessitatibus eum dolor nesciunt delectus,
-            voluptate blanditiis, obcaecati beatae ab aut ipsa consequuntur
-            tempora cumque. Ut quo enim vero odio minus nostrum eveniet,
-            doloribus veritatis dolorem unde ipsum, voluptatibus totam.
-            Explicabo, quas libero! Laborum incidunt minima consequatur ratione?
+          Comfy Sloth was created for furniture and home decor fans. Our marketplace website is offering vintage, Scandinavian, and designer furniture selected by professionals every single day. You can find items with a focus on quality, so now you can shop for unique pieces of furniture online.
           </p>
         </article>
       </Wrapper>

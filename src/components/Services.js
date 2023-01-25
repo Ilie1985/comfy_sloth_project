@@ -12,9 +12,7 @@ const Services = () => {
             built only for you
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-            quisquam saepe id reiciendis sunt, repudiandae libero amet rem quia
-            quod?
+          Our beautifully fitted home study furniture combines style, ergonomics and functionality. Whether you want a contemporary or traditional workspace our expert designers will listen to your needs and create a stylish, neat and organised home study that makes the most of available space and natural light which maximises both your comfort and your efficiency.
           </p>
         </article>
         <div className='services-center'>

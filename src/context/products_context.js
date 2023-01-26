@@ -38,7 +38,6 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
-  
   const fetchProducts = async (url) => {
     dispatch({ type: GET_PRODUCTS_BEGIN });
     try {
@@ -51,23 +50,24 @@ export const ProductsProvider = ({ children }) => {
   };
 
   const fetchSingleProduct = async (url) => {
-    dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
+    dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
-      const response = await axios.get(url)
-      const singleProduct = response.data
-      dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct })
+      const response = await axios.get(url);
+      const singleProduct = response.data;
+      dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
     } catch (error) {
-      dispatch({ type: GET_SINGLE_PRODUCT_ERROR })
+      dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
     }
-  }
+  };
 
   useEffect(() => {
     fetchProducts(url);
-    fetchSingleProduct(url)
   }, []);
   //////////////////////
   return (
-    <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
+    <ProductsContext.Provider
+      value={{ ...state, openSidebar, closeSidebar, fetchSingleProduct }}
+    >
       {children}
     </ProductsContext.Provider>
   );

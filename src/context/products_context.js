@@ -14,13 +14,11 @@ import {
 } from "../actions";
 
 const initialState = {
-
-
   isSidebarOpen: false,
-  // products_loading: false,
-  // products_error: false,
-  // products: [],
-  // featured_products: [],
+  products_loading: false,
+  products_error: false,
+  products: [],
+  featured_products: [],
   // single_product_loading: false,
   // single_product_error: false,
   // single_product: {},
@@ -40,17 +38,17 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
- ////////////////
+  ////////////////
   const fetchProducts = async (url) => {
-    dispatch({ type: GET_PRODUCTS_BEGIN })
+    dispatch({ type: GET_PRODUCTS_BEGIN });
     try {
-      const response = await axios.get(url)
-      const products = response.data
-      dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products })
+      const response = await axios.get(url);
+      const products = response.data;
+      dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
     } catch (error) {
-      dispatch({ type: GET_PRODUCTS_ERROR })
+      dispatch({ type: GET_PRODUCTS_ERROR });
     }
-  }
+  };
 
   // const fetchSingleProduct = async (url) => {
   //   dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
@@ -64,9 +62,9 @@ export const ProductsProvider = ({ children }) => {
   // }
 
   useEffect(() => {
-    fetchProducts(url)
-  }, [])
-//////////////////////
+    fetchProducts(url);
+  }, []);
+  //////////////////////
   return (
     <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
       {children}

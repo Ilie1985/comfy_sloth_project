@@ -44,6 +44,7 @@ const SingleProductPage = () => {
   if (error) {
     return <Error />;
   }
+
   const {
     name,
     price,
@@ -55,6 +56,7 @@ const SingleProductPage = () => {
     company,
     images,
   } = product;
+
   return (
     <Wrapper>
       <PageHero title={name} product />

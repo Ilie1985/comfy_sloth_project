@@ -8,8 +8,7 @@ import { CartProvider } from "./context/cart_context";
 import { UserProvider } from "./context/user_context";
 import { Auth0Provider } from "@auth0/auth0-react";
 
-//domain -  dev-32h2yox6z3mfz8rm.us.auth0.com
-//clientID- hbV08drY0KLLfvYfapxOL1mY1pWF2Kwe
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

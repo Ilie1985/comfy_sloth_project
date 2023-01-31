@@ -19,7 +19,7 @@ const CheckoutForm = () => {
   const { cart, total_amount, shipping_fee, clearCart } = useCartContext()
   const { myUser } = useUserContext()
   const navigate = useNavigate()
-  // STRIPE STUFF
+  // STRIPE 
   const [succeeded, setSucceeded] = useState(false)
   const [error, setError] = useState(null)
   const [processing, setProcessing] = useState('')
@@ -126,7 +126,7 @@ const CheckoutForm = () => {
         <p className={succeeded ? 'result-message' : 'result-message hidden'}>
           Payment succedded, see the result in your
           <a href={`https://dashboard.stripe.com/test/payments`}>
-            Stripe dasboard.
+            Stripe dashboard.
           </a>
           Refresh the page to pay again
         </p>

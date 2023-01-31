@@ -42,15 +42,11 @@ const cart_reducer = (state, action) => {
     const tempCart = state.cart.filter((item) => item.id !== action.payload);
     return { ...state, cart: tempCart };
   }
- 
- 
- 
+
   if (action.type === CLEAR_CART) {
     return { ...state, cart: [] };
   }
- 
- 
- 
+
   if (action.type === TOGGLE_CART_ITEM_AMOUNT) {
     const { id, value } = action.payload;
     const tempCart = state.cart.map((item) => {
@@ -75,9 +71,7 @@ const cart_reducer = (state, action) => {
 
     return { ...state, cart: tempCart };
   }
- 
- 
- 
+
   if (action.type === COUNT_CART_TOTALS) {
     const { total_items, total_amount } = state.cart.reduce(
       (total, cartItem) => {
